@@ -2,14 +2,18 @@ import React from 'react'
 import ContestPreview from './ContestPreview' 
 import PropTypes from 'prop-types' 
 
-const ContestList = ({contests}) => (
+const ContestList = ({contests , onContestClick}) => (
   <div>
-    {contests.map(c =>  <ContestPreview key={c.id} {...c} /> )}
+    {console.log(contests)}
+    {Object.keys(contests).map( id =>  <ContestPreview 
+       key={id} 
+       onContestClick={onContestClick} {...contests[id]} />)}
   </div>
 )
 
 ContestList.propTypes = {
-  contests: PropTypes.array 
+  contests: PropTypes.object.isRequired,
+  onContestClick: PropTypes.func.isRequired 
 }
 
 export default ContestList 

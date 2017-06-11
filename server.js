@@ -11,17 +11,14 @@ app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname, 'public')))
 
+import sr from "./serverRender"
 
-import serverRender from "./serverRender"
-
-app.get('/', (req, res) => {
-  serverRender().then(({
-        html,
-        data
-      }) =>
+app.get(['/', '/contest/:id'], (req, res) => {
+  sr(req.params.id)
+    .then(({ html, data , id }) =>
       res.render('index', {
         html,
-        data: JSON.stringify(data)
+        data: JSON.stringify(data) 
       })
     )
     .catch(console.error)

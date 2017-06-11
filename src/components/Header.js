@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 
 const Header = ({message}) =>( 
   <div className="Header">
-    <h1>React</h1>
     <h2>{message}</h2>
   </div>
 )
