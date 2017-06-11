@@ -1,0 +1,39 @@
+{
+  "name": "completejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node server.js --ignore public/",
+    "watch": "webpack --watch",
+    "dev": "run-p start watch"
+  },
+  "keywords": [],
+  "author": "Ahmed Eid",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "chalk": "^1.1.3",
+    "express": "^4.15.3",
+    "mongodb": "^2.2.28",
+    "prop-types": "^15.5.10",
+    "pug": "^2.0.0-rc.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^7.0.1",
+    "json-loader": "^0.5.4",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.0.2",
+    "webpack": "^2.6.1"
+  }
+}

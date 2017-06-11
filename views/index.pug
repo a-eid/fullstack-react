@@ -1,0 +1,12 @@
+extends layout 
+
+block vars 
+  - var title = "Home page"
+
+block content 
+  script.
+    //-  this to match serverd markup with initial data 
+    window.data = !{data} 
+    
+  #root !{html}
+  //- p= data
